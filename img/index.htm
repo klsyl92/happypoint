@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/png"  href="/assets/shared/images/favicon.png"/>
+
+    <title>해피포인트 - 메인</title>
+
+    <link rel="stylesheet" href="/assets/pc/css/common.css">
+<link rel="stylesheet" href="/assets/pc/css/vendors/uniform.custom.css" />
+<link rel="stylesheet" href="/assets/shared/js/plugins/jquery.selectric-1.11.1/selectric.css">
+<link rel="stylesheet" href="/assets/shared/js/plugins/slick-1.8.0/slick.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/shared/css/dev.css" />
+<link rel="stylesheet" href="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.min.css"/>
+
+    
+
+    <link rel="stylesheet" href="/assets/pc/js/plugins/swiper/swiper.css" />
+    <script src="/assets/pc/js/plugins/swiper/swiper.min.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+        var name = 'spc.app.FLASH_MAPS';
+        if( get_cookie( name ) ) {
+            document.cookie = name + "=;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        }
+        function get_cookie(name){
+            return document.cookie.split(';').some(function(c) {
+                return c.trim().startsWith(name + '=');
+            });
+        }
+    })();
+
+    </script>
+</head>
+<body class="">
+    <!-- #wrap -->
+    <div id="wrap">
+        <!-- #container -->
+        <div id="container">
+            <!-- #header -->
+    <!-- 헤더 -->
+<header id="header">
+    <div class="section-inner">
+        <div class="header-aside">
+            <ul class="header-site-menu">
+                <li><a onclick="headerPage.goLogin('/sso/business.jsp')" href="javascript:void(0);">AK mall</a></li>
+                        </ul>
+            <ul class="header-aside-menu">
+                <li><a href="/sso/business.jsp?returnUrl=/page/main/index.spc">로그인</a></li>
+                    <li><a href="/page/join/">회원가입</a></li>
+                <li><a href="/page/presentation/membership.spc">멤버십라운지</a></li>
+                <li><a href="/page/store/search.spc">매장찾기</a></li>
+                <li class="csmenu">
+                    <a href="/page/customer/qna.spc">고객센터</a>
+                    <ul class="menu-open">
+                        <li><a href="/page/customer/qna.spc">Q&A</a></li>
+                        <li><a href="/page/customer/faq.spc">FAQ</a></li>
+                        <li><a href="/page/customer/notice-list.spc">공지사항</a></li>
+                        <li><a href="/page/customer/term.spc">이용약관</a></li>
+                    </ul>
+                </li>
+                <li class="card"><a href="/page/mypage/card/register.spc"><i class="icon-card"></i>카드등록</a></li>
+            </ul>
+        </div>
+        <div class="header-primary">
+            <h1 class="header-logo"><a href="/"><img src="/assets/pc/images/common/layout/logo-header.png"
+                                                           alt="HappyPoint"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li class="gnb-menu">
+                        <a href="javascript:void(0);">소개</a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-gnb">
+                                <li class="sub-menu"><a href="/page/presentation/point.spc">해피포인트 소개</a></li>
+                                <li class="sub-menu"><a href="/page/presentation/card.spc?code=mo">해피포인트 카드</a></li>
+                                <li class="sub-menu"><a href="/page/presentation/brand.spc">제휴 브랜드</a></li>
+                                <li class="sub-menu"><a href="/page/presentation/membership.spc">멤버십 라운지</a></li>
+                                <li class="sub-menu"><a href="/page/presentation/app.spc">해피포인트앱 소개</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb-menu">
+                        <a href="javascript:void(0);">제휴</a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-gnb">
+                                <li class="sub-menu"><a href="/page/alliance/corporation.spc">제휴사 안내</a></li>
+                                <li class="sub-menu"><a href="/page/alliance/card.spc">제휴카드 안내</a></li>
+                                <li class="sub-menu"><a href="/page/alliance/culture.spc">문화 제휴 안내</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb-menu">
+                        <a href="javascript:void(0);">이벤트/쿠폰</a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-gnb">
+                                <li class="sub-menu"><a href="/page/event/event-list.spc">진행 이벤트</a></li>
+                                <li class="sub-menu"><a href="/page/event/winner-list.spc">당첨자발표</a></li>
+                                <li class="sub-menu"><a href="/page/event/coupon-info.spc">모바일 쿠폰 안내</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb-menu">
+                        <a href="javascript:void(0);">나눔</a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-gnb">
+                                <li class="sub-menu"><a href="/page/donation/intro.spc">해피포인트 기부소개</a></li>
+                                <li class="sub-menu"><a href="/page/donation/activity.spc">해피포인트 기부활동</a></li>
+                                <li class="sub-menu"><a href="/page/donation/happyBirthDay.spc">해피버스데이 파티</a></li>
+                                <li class="sub-menu"><a href="/page/donation/winnerList.spc">해피버스데이파티 당첨자 발표</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb-menu">
+                        <a href="javascript:void(0);">마이페이지</a>
+                        <div class="sub-menu-wrap">
+                            <ul class="sub-gnb">
+                                <li class="sub-menu"><a href="/page/mypage/my-point.spc">My 포인트</a></li>
+                                <li class="sub-menu"><a href="/page/mypage/card/password.spc">My 카드</a></li>
+                                <li class="sub-menu"><a href="/page/mypage/event/event-my-list.spc">My 이벤트</a></li>
+                                <li class="sub-menu"><a href="/page/member-info/index.spc">회원정보</a></li>
+                                <li class="sub-menu"><a href="javascript:headerPage.goVoc();">1:1 상담내역</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="btn-allmenu">전체메뉴</button>
+        </div>
+    </div>
+    <!-- 전체메뉴 -->
+    <div class="header-all-menu">
+        <div class="menu-header">
+            <div class="section-inner">
+                <h2 class="memu-title">전체메뉴</h2>
+                <ul class="util-menu">
+                    <li><a href="/page/presentation/membership.spc"><i class="icon membership"></i>멤버십라운지</a></li>
+                    <li><a href="/page/store/search.spc"><i class="icon store"></i>매장찾기</a></li>
+                </ul>
+                <button type="button" class="btn-close">메뉴닫기</button>
+            </div>
+        </div>
+        <div class="menu-body">
+            <div class="section-inner">
+                <div class="menu-wrapper">
+                    <div class="menu-row">
+                        <div class="menu-asset">
+                            <h3 class="depth01">소개</h3>
+                            <ul class="sub-menu depth02">
+                                <li><a href="/page/presentation/point.spc">해피포인트 소개</a></li>
+                                <li>
+                                    <a href="/page/presentation/card.spc?code=card">해피포인트 카드</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/presentation/card.spc?code=mo">모바일 카드</a></li>
+                                        <li><a href="/page/presentation/card.spc">실물 카드</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/page/presentation/brand.spc">제휴 브랜드</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/presentation/brand.spc">브랜드 소개</a></li>
+                                        <li><a href="/page/presentation/brand.spc?code=day">브랜드 데이</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/page/presentation/membership.spc">멤버십 라운지</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/presentation/membership.spc">멤버십 등급 안내</a></li>
+                                        <li><a href="/page/presentation/membership.spc?code=benefit">등급별 혜택</a></li>
+                                        <li><a href="/page/presentation/membership.spc?code=champion">브랜드 챔피언</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/page/presentation/app.spc">해피포인트앱 소개</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-asset">
+                            <h3 class="depth01">제휴</h3>
+                            <ul class="sub-menu depth02">
+                                <li>
+                                    <a href="/page/alliance/corporation.spc">제휴사 안내</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/alliance/corporation.spc">전체</a></li>
+                                        <li><a href="javascript:headerPage.goWithEncodeUrl('/page/alliance/corporation.spc?q.category=쇼핑');">쇼핑</a></li>
+                                        <li><a href="javascript:headerPage.goWithEncodeUrl('/page/alliance/corporation.spc?q.category=여행');">여행</a></li>
+                                        <li><a href="javascript:headerPage.goWithEncodeUrl('/page/alliance/corporation.spc?q.category=기타');">문화&테마파크</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/page/alliance/card.spc">제휴카드 안내</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/alliance/card.spc">전체</a></li>
+                                        <li><a href="javascript:headerPage.goWithEncodeUrl('/page/alliance/card.spc?q.category=체크카드');">체크카드</a></li>
+                                        <li><a href="javascript:headerPage.goWithEncodeUrl('/page/alliance/card.spc?q.category=신용카드');">신용카드</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/page/alliance/culture.spc">문화 제휴 안내</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-asset">
+                            <h3 class="depth01">이벤트/쿠폰</h3>
+                            <ul class="sub-menu depth02">
+                                <li><a href="/page/event/event-list.spc">진행이벤트</a></li>
+                                <li><a href="/page/event/winner-list.spc">당첨자 발표</a></li>
+                                <li><a href="/page/event/coupon-info.spc">모바일 쿠폰 안내</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-asset">
+                            <h3 class="depth01">나눔</h3>
+                            <ul class="sub-menu depth02">
+                                <li><a href="/page/donation/intro.spc">해피포인트 기부소개</a></li>
+                                <li><a href="/page/donation/activity.spc">해피포인트 기부활동</a></li>
+                                <li><a href="/page/donation/happyBirthDay.spc">해피버스데이 파티</a></li>
+                                <li><a href="/page/donation/winnerList.spc">해피버스데이파티 당첨자 발표</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-asset">
+                            <h3 class="depth01">마이페이지</h3>
+                            <ul class="sub-menu depth02">
+                                <li>
+                                    <a href="javascript:void(0);">My 포인트</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/mypage/my-point.spc">적립/사용내역</a></li>
+                                        <li><a href="/page/mypage/donation-point.spc">기부내역</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">My 카드</a>
+                                    <ul class="sub-menu depth03">
+                                        <li><a href="/page/mypage/card/password.spc">비밀번호 설정</a></li>
+                                        <li><a href="/page/mypage/card/register.spc">카드 등록</a></li>
+                                        <li><a href="/page/mypage/card/reissue.spc">카드 재발급 신청</a></li>
+                                        <li><a href="/page/mypage/card/reissue-status.spc">카드 재발급 신청 현황</a></li>
+                                        <li><a href="/page/mypage/card/platinum.spc">플래티넘 카드 신청</a></li>
+                                        <li><a href="/page/mypage/card/platinum-status.spc">플래티넘 카드 발급 신청현황</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/page/mypage/event/event-my-list.spc">My 이벤트</a></li>
+                                <li><a href="/page/member-info/index.spc">회원정보</a></li>
+                                <li><a href="javascript:headerPage.goVoc();">1:1 상담내역</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-row">
+                        <div class="menu-asset">
+                            <h3 class="depth01">고객센터</h3>
+                            <ul class="sub-menu depth02">
+                                <li><a href="/page/customer/qna.spc">Q&A</a></li>
+                                <li><a href="/page/customer/faq.spc">FAQ</a></li>
+                                <li><a href="/page/customer/notice-list.spc">공지사항</a></li>
+                                <li><a href="/page/customer/term.spc">이용약관</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-img">
+                <img src="/assets/pc/images/common/layout/img-allmenu-side.png" alt="캐릭터">
+            </div>
+        </div>
+    </div>
+    <!-- //전체메뉴 -->
+    <div class="dim-bg"></div>
+</header>
+
+<!-- 해피포인트 제휴 쇼핑몰 안내 #popupPartnerShopping -->
+<div class="layer-popup basic-popup small partner-popup partner-shopping-popup" id="popupPartnerShopping">
+    <form>
+        <div class="popup-wrapper">
+            <div class="popup-inner">
+                <div class="popup-body">
+                    <div class="popup-content">
+                        <div class="title-header">
+                            <div class="icon"><img src="/assets/pc/images/partner/icon-popup-shopping.png" alt="해피포인트 제휴 쇼핑몰 안내"></div>
+                            <h3 class="title">해피포인트 제휴 쇼핑몰 안내</h3>
+                            <p class="info-text">해피포인트 사이트를 통해<br> 제휴 쇼핑몰을 방문하셔서 상품을 구매하시면, <br>추가 해피포인트를 적립해드려요.</p>
+                            <p class="sub-text">적립 대상 상품은 각 제휴 쇼핑몰의<br> 운영 정책에 따라 변경 될 수 있습니다.</p>
+                        </div>
+                        <div class="bottom-btn-group half">
+                            <a href="javascript:void(0);" class="btn medium normal btn-close">취소</a>
+                            <a href="javascript:headerPage.layer_popup_3()" class="btn medium accent">사이트 이동</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="layer_popup" id="agreement"></div>
+
+<form name="headerForm" id="headerForm" method="post" action="/page/alliance/gate-check.spc" target="_blank">
+    <input type="hidden" name="code" id="code"/>
+    <input type="hidden" name="storeCd" id="storeCd"/>
+    <input type="hidden" name="W_RURL" id="W_RURL"/>
+    <input type="hidden" name="W_MEMBER_NO" value=""/>
+    <input type="hidden" name="W_USER_ID" value=""/>
+    <input type="hidden" name="pageCd" id="pageCd"/>
+</form>
+
+
+<!-- #content -->
+            <div id="content" class="content">
+                
+
+<!-- 키비주얼 -->
+<section class="main-section main-keyvisual-section">
+    <div class="main-keyvisual-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner-hit" style="background-image: url(https://front.happypointcard.com/upfiles/appMain/banner/normal/2020110509470336271811046109.png)" onclick="location.href='/page/presentation/point.spc'" data-bannerid="10001"></div>
+                <div class="swiper-slide banner-hit" style="background-image: url(https://front.happypointcard.com/upfiles/appMain/banner/normal/2020110502481711145321665417.png)" onclick="location.href='/page/presentation/app.spc'" data-bannerid="10000"></div>
+                </div>
+            <div class="slider-controller-area">
+                <div class="paging">
+                    <span class="current"></span><span class="slash">/</span><span class="total"></span>
+                </div>
+                <button type="button" class="btn-controller pause">시작/정지</button>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+<!-- //키비주얼 -->
+
+<!-- sns 영역 -->
+<section class="main-section main-sns-section">
+    <div class="section-inner">
+        <div class="main-section-title">
+            <h2 class="title">해피포인트 SNS</h2>
+            <p class="sub-text">더 많은 소식을 SNS로 만나보세요.</p>
+        </div>
+<ul class="sns-list" id="socialList">
+            </ul>
+    </div>
+</section>
+<!-- //sns 영역 -->
+
+<!-- 제휴 영역-->
+<section class="main-section main-partner-section">
+    <div class="section-inner">
+        <div class="main-section-title white">
+            <h2 class="title">제휴안내</h2>
+            <p class="sub-text">해피포인트 카드의 혜택을 똑같이 누리세요.</p>
+            <a href="/page/alliance/corporation.spc" class="btn-more">더보기</a>
+        </div>
+        <ul class="partner-list">
+            <li class="item">
+                    <a href="https://vo.la/HHRpB" target="_blank" title="제휴사이트 새창열기">
+                        <div class="logo" style="height: 150px"><img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504203916687912151476.jpg" alt="GS25" class="center-mode"></div>
+                        <div class="desc">
+                            <h3 class="name">현대백화점 해피포인트 카드</h3>
+                            <p class="benefit">해피포인트 5% 할인</p>
+                            <div class="partner-company-area">
+                                <div class="partner-logo-area">
+                                    <div class="partner-logo">
+                                        <img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504204016688258763518.jpg" alt="현대백화점 해피포인트 카드" class="center-mode">
+                                    </div>
+                                </div>
+                                <span class="partner-name">현대백화점카드</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <li class="item">
+                    <a href="http://www.kidzania.co.kr" target="_blank" title="제휴사이트 새창열기">
+                        <div class="logo" style="height: 150px"><img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504242116909556941101.jpg" alt="GS25" class="center-mode"></div>
+                        <div class="desc">
+                            <h3 class="name">키자니아</h3>
+                            <p class="benefit">키자니아 30% 할인</p>
+                            <div class="partner-company-area">
+                                <div class="partner-logo-area">
+                                    <div class="partner-logo">
+                                        <img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504242116909688448962.png" alt="키자니아" class="center-mode">
+                                    </div>
+                                </div>
+                                <span class="partner-name">키자니아</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <li class="item">
+                    <a href="http://www.shilladfs.com/comm/kr/ko/main" target="_blank" title="제휴사이트 새창열기">
+                        <div class="logo" style="height: 150px"><img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504520718575796416546.jpg" alt="GS25" class="center-mode"></div>
+                        <div class="desc">
+                            <h3 class="name">신라면세점</h3>
+                            <p class="benefit">0.3% 해피포인트 적립 또는 차감할인</p>
+                            <div class="partner-company-area">
+                                <div class="partner-logo-area">
+                                    <div class="partner-logo">
+                                        <img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504520718575903974714.png" alt="신라면세점" class="center-mode">
+                                    </div>
+                                </div>
+                                <span class="partner-name">신라면세점(오프라인)</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <li class="item">
+                    <a href="https://tonystreet.com" target="_blank" title="제휴사이트 새창열기">
+                        <div class="logo" style="height: 150px"><img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504272417092247423761.jpg" alt="GS25" class="center-mode"></div>
+                        <div class="desc">
+                            <h3 class="name">토니모리</h3>
+                            <p class="benefit">제품 구매금액 2% 해피포인트 적립</p>
+                            <div class="partner-company-area">
+                                <div class="partner-logo-area">
+                                    <div class="partner-logo">
+                                        <img src="https://front.happypointcard.com/upfiles/appMain/aliance/company/2020110504272417092405905369.png" alt="토니모리" class="center-mode">
+                                    </div>
+                                </div>
+                                <span class="partner-name">토니모리</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+    </div>
+</section>
+<!-- //제휴 영역-->
+
+<!-- 공지사항-->
+<!-- TODO 공지사항 링크 필요-->
+<section class="main-section main-notice-section">
+    <div class="section-inner">
+        <div class="main-section-title">
+            <h2 class="title">공지사항</h2>
+            <p class="sub-text">해피포인트 새로운 소식을 알려드립니다.</p>
+            <a href="/page/customer/notice-list.spc" class="btn-more">더보기</a>
+        </div>
+        <div class="notice-board">
+            <div class="item">
+                    <a href="/page/customer/notice-view.spc?seq=1590">
+                        <div class="board-content">
+                            <div class="cell">
+                                <!-- 새글 일경우 추가 -->
+                                    <i class="icon new"></i>
+                                <p class="article">해피포인트, 해피마켓, 해피오더 개인정보 처리방침 변경 공지</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div class="year-month">2020-12</div>
+                            <strong class="day">14</strong>
+                        </div>
+                    </a>
+                </div>
+            <div class="item">
+                    <a href="/page/customer/notice-view.spc?seq=1570">
+                        <div class="board-content">
+                            <div class="cell">
+                                <p class="article">SKT 휴대폰 본인확인 서비스 일시중단 안내 (12.04)</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div class="year-month">2020-11</div>
+                            <strong class="day">30</strong>
+                        </div>
+                    </a>
+                </div>
+            <div class="item">
+                    <a href="/page/customer/notice-view.spc?seq=1550">
+                        <div class="board-content">
+                            <div class="cell">
+                                <p class="article">SKT 휴대폰 본인확인 서비스 일시중단 안내 (11.22)</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <div class="year-month">2020-11</div>
+                            <strong class="day">20</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </div>
+</section>
+<!-- //공지사항-->
+
+<!-- App-->
+<section class="main-section main-banner-section">
+    <div class="banner-section">
+        <a href="/page/presentation/app.spc">
+            <img src="/assets/pc/images/main/img-benefit-banner-img.png" alt="해피포인트 APP의 특별한 혜택을 만나보세요!">
+        </a>
+    </div>
+</section>
+<!-- //App-->
+
+
+<!-- 시스템점검중 팝업 #popupServiceCheck -->
+<div class="layer-popup basic-popup service-check-popup" id="emergencyNoticePopup">
+    <form>
+        <div class="popup-wrapper">
+            <div class="popup-inner">
+                <div class="popup-body">
+                    <div class="popup-content">
+                        <div class="article-block">
+                            <img id="emergency-img" src="" alt="">
+                        </div>
+                        <div class="bottom-btn-group half">
+                            <button type="button" class="btn medium normal _nomore-today">오늘은 그만 보기</button>
+                            <button type="button" class="btn medium accent btn-close">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+            </div>
+    <!-- #footer -->
+    <!-- 푸터 -->
+<footer id="footer">
+    <div class="section-inner">
+        <div class="footer-top-area">
+            <div class="footer-customer">
+                <i class="icon">고객센터아이콘</i>
+                <div class="title">해피포인트 고객센터</div>
+                <div class="number"><strong class="number">080-320-1234</strong></div>
+                <div class="time">
+                    <span>평일 AM 9시 ~ PM 7시</span>
+                    <span>주말,공휴일 휴무</span>
+                </div>
+            </div>
+            <div class="family-site">
+                <select name="" id="family" class="select-tric medium type2">
+                    <option value="">패밀리 사이트</option>
+                    <option value="http://www.spc.co.kr/">SPC</option>
+                    <option value="https://www.pariscroissant.co.kr/">파리크라상</option>
+                    <option value="https://www.paris.co.kr/">파리바게뜨</option>
+                    <option value="http://www.caffe-pascucci.co.kr/ ">파스쿠찌</option>
+                    <option value="http://www.jambajuice.co.kr/">잠바주스</option>
+                    <option value="https://www.dqueenscatering.com/">디퀸즈케이터링</option>
+                    <option value="http://www.baskinrobbins.co.kr/">배스킨라빈스</option>
+                    <option value="http://www.dunkindonuts.co.kr/">던킨도너츠</option>
+                    <option value="https://www.bizeun.co.kr/">빚은</option>
+                    <option value="http://dining.spc.co.kr/index.do">SPC외식 브랜드</option>
+                    <option value="https://www.hicafemall.com/">브랜드몰</option>
+                </select>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <ul class="footer-menu-list">
+                <li><a href="/page/customer/term.spc">회원이용약관</a></li>
+                <li class="point"><a href="/page/customer/term.spc?no=2">개인정보처리방침</a></li>
+                <li><a href="/page/customer/term.spc?no=3">위치기반 서비스 이용약관</a></li>
+                <li><a href="/page/customer/term.spc?no=5">위치정보사업 이용약관</a></li>
+                <li><a href="/page/customer/term.spc?no=4">이메일 무단수집거부</a></li>
+            </ul>
+            <div class="company-info">
+                <span>에스피씨네트웍스</span>
+                <span>사업자 등록번호: 113-86-10017</span>
+                <span>경기도 성남시 중원구 사기막골로31번길 18(상대원동)</span>
+                <span class="copy">Copyright ⓒ by SPC ALL RIGHTS RESERVED.</span>
+            </div>
+            <div class="footer-etc-site">
+                <div class="item"><a href="sealinfo.verisign.com" target="_blank" title="인증서 보기 - 새창 열림"><img src="/assets/pc/images/common/layout/logo-norton.png" alt="norton"></a></div>
+                <div class="item"><a href="http://www.spc.co.kr/" target="_blank" title="SPC 홈페이지로 바로가기 - 새창 열림"><img src="/assets/pc/images/common/layout/logo-spc.png" alt="spc"></a></div>
+            </div>
+            <div class="footer-sns">
+                <div class="item insta"><a href="https://www.instagram.com/happypoint_official" target="_blank" title="sns페이지 새창이동">insta</a></div>
+                <div class="item facebook"><a href="https://www.facebook.com/happypointcard" target="_blank" title="sns페이지 새창이동">facebook</a></div>
+                <div class="item blog"><a href="https://blog.naver.com/happypoints" target="_blank" title="sns페이지 새창이동">blog</a></div>
+                <div class="item youtube"><a href="https://www.youtube.com/channel/UCjlghdluB8Ke5B7hUjENdUA" target="_blank" title="sns페이지 새창이동">youtube</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+    </div>
+
+    <script src="/assets/shared/js/plugins/jquery-3.2.0/jquery-3.2.0.min.js"></script>
+<script src="/assets/shared/js/plugins/jquery.selectric-1.11.1/jquery.selectric.min.js"></script>
+<script src="/assets/shared/js/plugins/jquery.uniform-2.2.0/jquery.uniform.min.js"></script>
+<script src="/assets/shared/js/plugins/swiper/swiper.min.js"></script>
+<script src="/assets/shared/js/plugins/slick-1.8.0/slick.js"></script>
+
+<script src="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.min.js"></script>
+<script src="/assets/pc/js/plugins/datepicker-1.0.9/datepicker.ko-KR.js"></script>
+<script src="/assets/pc/js/plugins/bluebird/bluebird.js"></script>
+
+<script src="/assets/pc/js/ui/common.ui.js?v=2020122111"></script>
+<script src="/assets/pc/js/ui/common.ui.dev.js?v=2020122111"></script>
+
+<script src="/assets/shared/js/unvus/unvus.js?v=2020122111"></script>
+<script src="/assets/shared/js/unvus/unvus.jq.js?v=2020122111"></script>
+<script src="/assets/shared/js/unvus/unvus.util.js?v=2020122111"></script>
+<script src="/assets/shared/js/unvus/unvus.upload.js?v=2020122111"></script>
+<script>
+    var rootContext = '';
+    var sessionUserId = null;
+    $(function () {
+        var token = $("meta[name='_csrf']").attr('content');
+        var header = $("meta[name='_csrf_header']").attr('content');
+        if(token && header) {
+            $(document).ajaxSend(function(event, xhr, options) {
+                xhr.setRequestHeader(header, token);
+            });
+        }
+        $.ajaxSetup({
+            contentType: "application/json",
+            dataType: "json"
+        });
+
+    });
+</script>
+<script type="text/javascript">
+        //<![CDATA[
+        var page = {};
+
+        (function () {
+            // init
+            $(function () {
+                // 초기화 코드
+                $('.sns-tab li.all').addClass('on');
+
+                /* event bind: 오늘 그만 보기 */
+                $('._nomore-today').on('click', page.noMoreToday);
+                $('.banner-hit').on('click', page.bannerHitLog);  // 배너클릭
+                page.getSocialList('all');
+                page.openEmergencyPopup();
+            });
+
+            // functions
+            page = {
+                changeTab: function(type) {
+                    //TODO 권한 생성시 alert 삭제
+                    if (type === 'instagram' || type === 'facebook') {
+                        alert('준비 중입니다.');
+                        return;
+                    }
+
+                    $('.sns-tab li').removeClass('on');
+                    $('.sns-tab li.' + type).addClass('on');
+                    page.getSocialList(type);
+                },
+                getSocialList: function(type) {
+                    $.ajax({
+                        url: '/api/socialList',
+                        data: {type: type},
+                        type: 'get',
+                        success: function (res) {
+                            if(res.code !== '00') {
+                                alert(res.message);
+                            } else {
+                                var data = res.result;
+                                // 여기 로직
+                                var html = '';
+                                if(data.length > 0) {
+                                    $.each(data, function (key, value) {
+                                        var link = '';
+                                        if(value.snstype == 'youtube') {
+                                            link = 'https://www.youtube.com/watch?v=' + value.link;
+                                        } else {
+                                            link = value.link;
+                                        }
+
+                                        html += '<li class="item">';
+                                        html += '    <a href="'+ link +'" target="_blank">';
+                                        html += '        <div class="image image-controller"><img src="'+ value.picture +'" alt="sns이미지" class="center-mode"></div>';
+                                        html += '        <div class="text-wrap">';
+                                        html += '            <div class="cell">';
+                                        html += '                <div class="sns-text">'+ (value.caption == null ? '' : value.caption) +'</div>';
+                                        html += '            </div>';
+                                        html += '        </div>';
+                                        if(value.snstype == 'instagram') {
+                                            html += '<div class="sns-icon"><img src="/assets/pc/images/main/icon/icon-instagram.png" alt="인스타그램"></div>';
+                                        } else if(value.snstype == 'facebook') {
+                                            html += '<div class="sns-icon"><img src="/assets/pc/images/main/icon/icon-facebook.png" alt="facebook"></div>';
+                                        } else if(value.snstype == 'youtube') {
+                                            html += '<div class="sns-icon"><img src="/assets/pc/images/main/icon/icon-youtube.png" alt="youtube"></div>';
+                                        } else if(value.snstype == 'blog') {
+                                            html += '<div class="sns-icon"><img src="/assets/pc/images/main/icon/icon-blog.png" alt="블로그"></div>';
+                                        }
+                                        html += '    </a>';
+                                        html += '</li>';
+                                    });
+
+                                    $('#socialList').html(html);
+
+                                    //이미지 센터 정렬
+                                    _thumbCenter.fuInit('.image-controller');
+                                }
+                            }
+                        }
+                    });
+                },
+                openEmergencyPopup: function () {
+                    $.ajax({
+                        type: 'get',
+                        url: '/api/emergency/notice',
+                        success: function (res) {
+                            if(res.code === '00'){
+                                var data = res.result;
+                                $('#emergency-img').prop('src', 'https://front.happypointcard.com' + data['imgpath']);
+                                $('#emergency-img').prop('alt', data['imgname']);
+                                if(unvus.util.getCookie('nomoretoday') !== 'Y'){
+                                    popupBase.layerPopup('#emergencyNoticePopup');
+                                }
+                            }
+                        },
+                        error: function (rq, status, err) {
+                            alert('오류가 발생했습니다.');
+                            console.log(err);
+                        }
+                    });
+                },
+                noMoreToday: function () {
+                    unvus.util.setCookie('nomoretoday', 'Y');
+                    popupBase.closePopup('#emergencyNoticePopup');
+                },
+                bannerHitLog: function () {
+                    var bannerId = $(this).data('bannerid');
+                    var areaCode = "PW_00001";
+                    $.ajax({
+                        contentType: 'application/json',
+                        url: '/api/common/banner-hit-log',
+                        type: 'post',
+                        data: JSON.stringify({
+                            bannerId : bannerId,
+                            areaCode : areaCode
+                        }),
+                        success: function (res) {
+                            if(res.code !== '00') {
+                                console.log(res.message);
+                            }else {
+                                console.log("log success");
+                            }
+
+                        }
+                    });
+                }
+            };
+        })();
+        //]]>
+    </script><script type="text/javascript">
+        //<![CDATA[
+        var headerPage = {};
+
+        (function () {
+            // init
+            $(function () {
+                // 나의 포인트 조회
+            });
+
+            // functions
+            headerPage = {
+                goLogin: function (url) {
+                    if (confirm("로그인 후 이용 가능해요. 로그인 하시겠어요?")) {
+                        document.location.href = url;
+                    } else {
+                        return false;
+                    }
+                },
+                layer_popup_1: function (url, code, storeCd, agree_title, agree_item, pageCd) {
+                    console.log("layerpopup1 함수");
+
+                    $('#W_RURL').val(url);
+                    $('#storeCd').val(storeCd);
+                    $("#pageCd").val(pageCd);
+                    $("#code").val(code);
+                    $("#guide").css("display", "block");		// 제휴 쇼핑몰 안내 레이어 팝업
+
+                    headerPage.layer_popup_2(url, code, storeCd, agree_title, agree_item);		//실질적인 레이어 팝업 실행
+                    popupBase.layerPopup('#popupPartnerShopping');
+                },
+                layer_popup_2: function (url, code, storeCd, agree_title, agree_item) {
+                    console.log("layerpopup2 함수");
+
+                    $('#code').val(code);
+                    $.ajax({
+                        type:"post",
+                        url:"/page/alliance/agree",
+                        data: JSON.stringify({"storeCd":storeCd, "code":code, "agree_item":agree_item, "url":url, "agree_title":agree_title}),
+                        dataType: 'html',
+                        success:function(data){
+                            if (data !== '' && data != null) {
+                                $('#popupPersnalInfo').remove();
+                                var $agreement = $('#agreement');
+                                $agreement.empty();
+                                $agreement.append(data);		// 정보 제공 동의 팝업에 띄울 값들 세팅하여 DOM 객체 가져옴
+                            }
+                        },
+                        error: function(trequest,status,error) {
+                            console.log("trequest:" + trequest);
+                            console.log("status:" + status);
+                            console.log("error:" + error);
+
+                        }
+                    });
+                },
+                layer_popup_3: function () {
+                    console.log("layerpopup3 함수");
+
+                    popupBase.closePopup('#popupPartnerShopping');		//제휴 쇼핑묠 안내 레이어 팝업은 가려주고
+
+                    if("Y" === $('#code').val()) {
+                        console.log('code==Y');
+                        // 일전에 동의 했다면
+                        headerPage.onSubmit();
+                    }else{
+                        console.log('code==N || code==null');
+                        // 일전에 동의 하지않았다면 동의 팝업을 보여준다.
+                        popupBase.layerPopup('#popupPersnalInfo');
+                    }
+
+                },
+                onSubmit: function (obj) {
+                    if(obj !== undefined && obj.url !== undefined) {
+                        $('#W_RURL').val(obj.url);
+                    }
+                    if(obj !== undefined && obj.storeCd !== undefined) {
+                        $('#storeCd').val(obj.storeCd);
+                    }
+                    $('#headerForm').submit();	// 제출
+
+                },
+                agree: function () {
+                    console.log('agree click');
+                    $('#agreeForm').submit();
+                },
+                goVoc: function () {
+                    if (false) {
+                        var popOption = 'width=920, height=700, resizable=no, scrollbars=no, status=no;';
+                        window.open('/page/customer/voc.spc', '', popOption);
+                    } else {
+                        headerPage.goLogin('/sso/business.jsp');
+                    }
+                },
+                goWithEncodeUrl: function(url){
+                    location.href=encodeURI(url);
+                }
+            };
+        })();
+        //]]>
+    </script><script type="text/javascript">
+        //<![CDATA[
+        var footerPage = {};
+
+        (function () {
+            // init
+            $(function () {
+                $('#family').on('change', footerPage.move);
+            });
+
+            // functions
+            footerPage = {
+                move: function () {
+                    var url = $('#family option:selected').val()
+                    window.open(url);
+                }
+
+            };
+        })();
+        //]]>
+    </script><!-- 90일 비밀번호 변경 팝업 -->
+    </body>
+</html>
